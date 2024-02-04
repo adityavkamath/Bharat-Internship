@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Forum Personal Project</title>  
+        <link rel="stylesheet" href="styles/index.css">
+    </head>
+    <body>
+        <nav>
+            <div class="logo-div">
+                <p>BLOG</p>
+            </div>
+            <div class="nav-buttons">
+                <% for (let i in pages) { %>
+                    <% if (pages[i].url == url) { %>
+                        <p><a href="<%= pages[i].url %>" class="active-nav-item"><%= pages[i].name %></a></p>
+                    <% } else { %>
+                        <p><a href="<%= pages[i].url %>"><%= pages[i].name %></a></p>
+                    <% } %>
+                <% } %>
+            </div>
+            <!-- <div class="responsive-div">
+
+            </div> -->
+        </nav>

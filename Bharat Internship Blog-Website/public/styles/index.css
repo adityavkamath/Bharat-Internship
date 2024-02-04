@@ -1,0 +1,180 @@
+html,
+body {
+  width: 100vw;
+  max-height: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #282c3585; /* Dark mode background color */
+  color: chartreuse; /* Text color in dark mode */
+}
+.container h1{
+    color:cornsilk;
+}
+/* HEADER */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100vw;
+  background-color: #11334c9f; /* Dark mode header background color */
+}
+
+.logo-div {
+  padding-left: 1em;
+  background-color: #2a3742; /* Dark mode logo background color */
+}
+
+.logo-div > p {
+  padding: 0;
+  margin: 0;
+  align-self: center;
+  padding: 1em 1em 1em 0em;
+  font-weight: bolder;
+  color: chartreuse; /* Logo text color in dark mode */
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+}
+
+.nav-buttons > p {
+  margin: 0;
+}
+
+.nav-buttons > p > a {
+  text-decoration: none;
+  color: cyan;
+  transition: border 200ms;
+}
+
+.nav-buttons > p > a:hover {
+  border-bottom: 4px solid #ddd;
+}
+
+.active-nav-item {
+  border-bottom: 4px solid #ddd;
+}
+
+/* INDEX */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: 4em 0;
+}
+
+.blog-post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 70vw;
+  padding: 2em;
+  background-color: #394b59; /* Dark mode form background color */
+}
+
+.blog-post-form > section {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-post-form > section > textarea {
+  height: 7em;
+}
+
+.blog-post-form > button {
+  padding: 10px;
+  color: chartreuse;
+  background-color: #2a3742; /* Dark mode button background color */
+  border: none;
+  cursor: pointer;
+  transition: background-color 500ms;
+}
+
+.blog-post-form > button:hover {
+  background-color: #1d242b; /* Dark mode button hover background color */
+}
+
+.blog-post-form > section > input {
+  padding: 5px;
+}
+
+.post-delete-form {
+  display: flex;
+  width: 70vw;
+  justify-content: center;
+  padding: 1em 2em;
+  background-color: #394b59;
+}
+
+.post-delete-form > input {
+  width: 5em;
+}
+
+.post-delete-form > button {
+  border: none;
+  padding: 5px;
+  color: #ddd;
+  background-color: #b02e0c; /* Dark mode delete button background color */
+  cursor: pointer;
+  transition: background-color 500ms;
+}
+
+.post-delete-form > button:hover {
+  background-color: #931f0b; /* Dark mode delete button hover background color */
+}
+
+.blog-posts-container {
+  margin-top: 1em;
+  width: 70vw;
+  padding: 1em 2em;
+  background-color: #394b59;
+}
+
+.post-container {
+  background-color: #2a3742;
+  margin-bottom: 1em;
+  border-radius: 5px; /* Rounded corners for post container */
+  overflow: hidden; /* Hide overflowing content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle lift */
+}
+
+.post-container > section > p {
+  margin: 0;
+  padding: 0.5em;
+}
+
+.post-top > p {
+  color: cyan;
+  font-size: 10px;
+}
+
+.post-middle > p {
+  background-color: #394b59;
+  color: cyan; /* Dark mode post title text color */
+  font-weight: bolder;
+}
+
+.post-bottom > p {
+  color: cyan;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding: 1em;
+  background-color: #394b59;
+}
+
+footer > p {
+  margin: 0;
+  color: #81a1c1;
+}

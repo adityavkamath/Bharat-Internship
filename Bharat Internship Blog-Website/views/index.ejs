@@ -1,0 +1,52 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+    <h1>WRITE A BLOG</h1>
+    <form class="blog-post-form" action="/submit-post" method="post">
+        <section>
+            <label for="post-title">Title</label>
+            <input type="text" name="post-title">
+        </section>
+
+        <section>
+            <label for="post-content">Content</label>
+            <textarea name="post-content" placeholder="Text Here.."></textarea>
+        </section>
+
+        <button type="submit">SUBMIT</button>
+    </form>
+
+    <div class="blog-posts-container">
+
+        <% if (locals.posts && posts.length > 0) { %>
+
+            <% posts.forEach((post) => { %>
+                <h1>BLOGS</h1>
+                <div class="post-container">
+                    <section class="post-middle">
+                        <h3>Title:</h3>
+                        <p><%= post.title %></p>
+                    </section>
+                    <section class="post-bottom">
+                        <h3>Content:</h3>
+                        <p><%= post.content %></p>
+                    </section>
+
+                    <!-- Add delete button -->
+                    <form class="post-delete-form" action="/delete-post" method="post">
+                        <input type="hidden" name="post-to-delete" value="<%= post._id %>">
+                        <button type="submit">DELETE</button>
+                    </form>
+                </div>
+
+            <% }); %>
+
+        <% } else { %>
+
+            <p>Currently No Posts to show...</p>
+
+        <% } %>
+
+    </div>
+
+</div>
